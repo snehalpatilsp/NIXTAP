@@ -1,0 +1,16 @@
+package com.nixtap.profileservice.repository;
+
+import com.nixtap.profileservice.entity.UserProfile;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface UserProfileRepository extends JpaRepository<UserProfile, Long> {
+    Optional<UserProfile> findByUserId(Long userId);
+    Optional<UserProfile> findByUsername(String username);
+    Boolean existsByUserId(Long userId);
+    Boolean existsByUsername(String username);
+    void deleteByUserId(Long userId);
+}

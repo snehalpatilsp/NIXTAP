@@ -1,0 +1,35 @@
+# Logs & temp files
+*.log
+service-logs/
+*.tmp
+
+# Java / Maven build artifacts
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Node / Frontend build artifacts & dependencies
+node_modules/
+dist/
+.next/
+build/
+
+# IDE & Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# OS generated files
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Generated QR files
+qr-storage/
